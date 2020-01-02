@@ -144,6 +144,8 @@ def set_config_ovf(config, hostname, metadata):
     
     if hostname != '':
         config.set(['system', 'host-name'], value=hostname, replace=True)
+    else:
+        config.set(['system', 'host-name'], value='vyos', replace=True)
 
 
 def set_config_interfaces(config, interface):
